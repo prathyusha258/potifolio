@@ -1,0 +1,486 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background-color: plum;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: black;
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffccd5;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: black;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General styles for the About Me section */
+#about {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Image styling */
+.about-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling */
+.about-content div {
+    max-width: 500px;
+}
+
+.about-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: plum;
+}
+
+.about-content pre {
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+    line-height: 1.6;
+    color: #555;
+    white-space: pre-wrap; /* To ensure the text wraps properly */
+}
+
+/* Responsive design for About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content div {
+        max-width: 100%;
+    }
+}
+
+/* Skills Section */
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.skill p {
+    font-size: 1.2rem;
+    color: plum;
+}
+
+.progress-bar {
+    background-color: plum;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    background-color: plum;
+    height: 100%;
+    width: 0;
+    animation: fillBar 1s forwards;
+}
+
+@keyframes fillBar {
+    to {
+        width: 100%; /* Adjusted by inline style */
+    }
+}
+
+/* Responsive design for Skills Section */
+@media (max-width: 768px) {
+    .skill {
+        width: 80%;
+    }
+}
+
+/* Projects Section */
+.projects-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    background-color: #ffe5e5;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    color: aqua;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.project p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project a {
+    color: plum;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+    border-bottom: floralwhite;
+}
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for Projects Section */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+}
+
+/* Education Section */
+#education {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styling the list items within the education-content class */
+.education-content {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-content li {
+    background-color: #fff;
+    border-left: 5px solid plum;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-content li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the headers and paragraphs within each education item */
+.education-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: plum;
+}
+
+.education-content p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive design for Education Section */
+@media (max-width: 768px) {
+    .education-content li {
+        padding: 15px;
+    }
+
+    .education-content h3 {
+        font-size: 1.2em;
+    }
+
+    .education-content p {
+        font-size: 0.9em;
+    }
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffe5e5;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ffccd5;
+    border-radius: 5px;
+}
+
+#contact form button {
+    padding: 0.7rem 2rem;
+    background-color: plum;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact form button:hover {
+    background-color: wheat;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: plum;
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+footer ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive design for Header, Footer, and Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: plum;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 1rem;
+    position: relative;
+    width: 50%;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 0.7s forwards;
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(100px);
+    animation: slideInRight 0.7s forwards;
+}
+
+.timeline-content {
+    background-color: plum;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: plum;
+    margin-top: 0;
+}
+
+.timeline-content p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+/* Responsive design for Timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+        animation: fadeIn 0.7s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+}

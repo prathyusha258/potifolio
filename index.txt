@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Basic Web Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="home">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="./img/profile.jpg" alt="Profile Picture">
+            <div>
+                <h3>Prathyusha Rayapudi</h3>
+                <p1>
+                    Iam computer science student at Vignan University,Guntur,Andhra Pradesh.
+                    I'm passionate about building innovative software solutions 
+                    that make a difference.
+                    This space is where I showcase my projects,experiments,and learnings as I navigate the exciting world of tech.
+                </p1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skill">
+                <p>Java</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">55%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Python</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;">60%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-content">
+            <div class="project">
+                <img src="img/interactive.jpg" width="300" height="300" alt="Project 1">
+                
+                <p>Interactive Resume</p>
+                <a href="project1-link.html">View Project</a>
+            </div>
+            <div class="project">
+                <img src="img/generator.jpg"  width="300" height="300" alt="Project 2">
+                
+                <p>Image Caption Generator</p>
+                <a href="project2-link.html">View Project</a>
+            </div>
+            <div class="project">
+                <img src="img/walmart.jpg" width="300" height="300" alt="Project 3">
+                
+                <p>Project is about Walmart sales prediction.</p>
+                <a href="project3-link.html">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <ul class="education-content">
+            <li>
+                <h3>Secondary Education</h3>
+                <p>Bhashyam Junior College <br> Board of Intermediate Education, Andhra Pradesh <br>2020 - 2022</p>
+            </li>
+            <li>
+                <h3>Bachelor of Technology (Computer Science)</h3>
+                <p>Vignan's University, Guntur <br>2022 - 2026 </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <ul>
+                <li><a href="https://github.com/your-profile">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/prathyusha-rayapudi-784394317/">LinkedIn</a></li>
+            </ul>
+            <p>&copy; 2024 Prathyusha Rayapudi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+</body>
+
+</html>
